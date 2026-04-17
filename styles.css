@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1a1625;
+    color: #f4f2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 0.938rem;
+    line-height: 1.5;
+    padding: 1.5rem 1rem;
+}
+
+article {
+    width: 100%;
+    max-width: 60rem;
+    background: #231c33;
+    padding: 2rem;
+    border: 1px solid #3a3155;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(255, 110, 199, 0.162);
+}
+
+
+
+.profile-section{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.5rem;
+}
+
+.profile-image{
+    width:8.313rem;
+    height: 8.313rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #3a3155;
+    flex-shrink: 0;
+}
+
+.profile-image:hover{
+    border: 2px solid #ff6ec7;
+}
+
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s;
+}
+
+.profile-image img:hover {
+  transform: scale(1.1);
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.profile-name{
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.profile-bio{
+    color: #b8b3d6;
+}
+
+.current-time {
+    width: 18rem;
+    font-family: 'Fira Code', monospace;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 0.5rem;
+    background: #1a1625;
+    border: 1px solid #3a3155;
+    border-radius: 8px;
+}
+
+.indicator-dot { 
+    position: relative; 
+    width: 0.625rem; 
+    height: 0.625rem; 
+    background-color: #ff6ec7; 
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: pulse-animation 3s infinite ease-out; /* 5s for slow effect */
+}
+
+@keyframes pulse-animation {
+  0% { transform: scale(1); 
+    opacity: 0.8; 
+}
+
+  100% { transform: scale(1.2); 
+    opacity: 0.6; 
+}
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: #3a3155;
+    margin: 2rem 0;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+h3{
+     font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #b8b3d6;
+}
+
+.social-links-section {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+svg {
+    width: 1.65rem;
+    height: 1.65rem;
+    fill: #ff6ec7;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    font-weight: 500;
+    gap: 0.475rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #3a3155 ;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #f4f2ff;
+}
+
+.link:hover{
+    border: 1px solid #ff6ec7;
+    color: #ff6ec7;
+}
+
+.preferences-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.hobbies, .dislikes{
+   display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.hobby-list, .dislike-list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.hobby-list li{
+    background: #ff6ec72d;
+    border: 1px solid #ff6ec7;
+    border-radius: 16px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    color: #ff6ec7;
+}
+
+.hobby-list li:hover{
+    color: #feb3e1;
+    background: #feb3e12d;
+}
+
+.dislike-list li{
+    background: #2c2440;
+    border: 1px solid #b8b3d6;
+    border-radius: 16px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    color: #b8b3d6;
+}
+
+.dislike-list li:hover{
+    color: #d0cddb;
+    background: #403659;
+}
+
+@media (max-width: 640px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links-section{
+        flex-direction: column;
+    }
+
+    .link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile-info {
+        align-items: center;
+    }
+
+    .current-time {
+        width: 100%;
+    }
+
+    .preferences-section {
+        grid-template-columns: 1fr;
+    }
+}
